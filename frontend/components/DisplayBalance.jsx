@@ -35,21 +35,26 @@ export function DisplayBalance() {
   }
 
   async function displayBalance(signer, provider, setLoading, setData) {
-    setLoading(true)
-    const balanceBN = await provider.getBalance(
-        signer._address
-      );
-    setLoading(false)
-    const balance = ethers.utils.formatEther(balanceBN);
-    console.log(
-    `The account of address ${
-        signer._address
-    } has ${balance} ETH\n`
-    );
-    let output = `The account of address ${
-        signer._address
-    } has ${balance} ETH\n`
-    setData(output)
+    if(signer){
+        setLoading(true)
+        const balanceBN = await provider.getBalance(
+            signer._address
+          );
+        setLoading(false)
+        const balance = ethers.utils.formatEther(balanceBN);
+        console.log(
+        `The account of address ${
+            signer._address
+        } has ${balance} ETH\n`
+        );
+        let output = `The account of address ${
+            signer._address
+        } has ${balance} ETH\n`
+        setData(output)
+    }else{
+        alert("Please connect to a wallet");
+    }
+    
   }
    
  
