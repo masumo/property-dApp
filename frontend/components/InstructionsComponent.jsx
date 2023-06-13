@@ -41,7 +41,10 @@ function PageBody(){
 		<Tabs value="html">
 			<TabsHeader>
 				<Tab key="search" value="search">
-					Open
+					Search
+				</Tab>
+				<Tab key="create" value="create">
+					Input Data
 				</Tab>
 				<Tab key="balance" value="balance">
 					Balance
@@ -51,9 +54,6 @@ function PageBody(){
 				</Tab>
 				<Tab key="burn" value="burn">
 					Withdraw
-				</Tab>
-				<Tab key="create" value="create">
-					Input Data
 				</Tab>
 			</TabsHeader>
 			<TabsBody>
