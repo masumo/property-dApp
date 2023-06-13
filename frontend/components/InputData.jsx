@@ -40,25 +40,67 @@ export function InputData() {
 }
 
     return (
-      <div>
-        <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96" method="post" onSubmit={handleSubmit}>
-              <Typography
-                  variant="medium"
-                  color="blue-gray"
-                  className="mb-4 font-medium"
-                >
-                  Property Address :
-              </Typography>
-              <div className="mb-4 flex flex-col gap-6">
-                <Input label ="Number:" name="number" />
-                <Input label ="Street:" name="street" />
-                <Input label ="City:" name="city" />
-                <Input label ="State:" name="state" />
-                <Input label ="Zip:" name="zip" />
-                <Input label ="Country:" name="country" />
+      <div  >
+        <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:flex sm:justify-center" method="post" onSubmit={handleSubmit}>
+              <div className="flex flex-row gap-6">
+                  <div>
+                      <Typography
+                      variant="medium"
+                      color="blue-gray"
+                      className="mb-4 font-medium"
+                        >
+                          Property Address :
+                      </Typography>
+                      <div className="mb-4 flex flex-col gap-6">
+                        <Input label ="Number:" name="number" />
+                        <Input label ="Street:" name="street" />
+                        <Input label ="City:" name="city" />
+                        <Input label ="State:" name="state" />
+                        <Input label ="Zip:" name="zip" />
+                        <Input label ="Country:" name="country" />
+                      </div>
+                  </div>
+                  <div>
+                      <Typography
+                      variant="medium"
+                      color="blue-gray"
+                      className="mb-4 font-medium"
+                        >
+                          Property Data :
+                      </Typography>
+                      <div className="mb-4 flex flex-col gap-6">
+                        <Input label ="Name:" name="name" />
+                        <Input label ="Description:" name="description" />
+                        <Input label ="Status:" name="propertyStatus" />
+                        <Input label ="Type:" name="propertyType" />
+                        <Input label ="Land Size:" name="landSize" />
+                        <Input label ="Price per sq.ft:" name="pricePerSqft" />
+                        <Input label ="Bedrooms:" name="bedrooms" />
+                        <Input label ="Bathrooms:" name="bathrooms" />
+                        <Input label ="Year Built:" name="yearBuilt" />
+                        <Input label ="Last sold price:" name="lastSoldPrice" />
+                        <Input label ="Last sold date:" name="lastSoldDate" />
+                      </div>
+                      <Button className="mt-6" fullWidth type="submit">Save</Button>
+                  </div>
+                  <div>
+                      <Typography
+                      variant="medium"
+                      color="blue-gray"
+                      className="mb-4 font-medium"
+                        >
+                          Property Owner :
+                      </Typography>
+                      <div className="mb-4 flex flex-col gap-6">
+                        <Input label ="Name:" name="name" />
+                        <Input label ="Email:" name="email" />
+                        <Input label ="Phone:" name="phone" />
+                      </div>
+                  </div>
               </div>
               
-              <Button className="mt-6" fullWidth type="submit">Save</Button>
+              
+              
           </form>
           { 
             isLoading? <p>Betting is in progress...</p> : <p></p>
